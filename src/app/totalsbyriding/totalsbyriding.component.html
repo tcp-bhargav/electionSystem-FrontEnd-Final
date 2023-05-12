@@ -1,0 +1,22 @@
+<div  class="table-container">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Riding Number</th>
+      <th>Leading Party</th>
+      <th>Elected</th>
+      <th>Name (French)</th>
+      <th>Name (English)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let riding of totalsByRiding ; let i = index">
+      <td>{{ riding.RidingNumber }}</td>
+      <td>{{ riding.LeadingParty }}</td>
+      <td>{{ riding.Elected }}</td>
+      <td>{{ riding.Name_Fr }}</td>
+      <td>{{ riding.Name_En }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

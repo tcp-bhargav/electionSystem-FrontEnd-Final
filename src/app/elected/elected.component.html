@@ -1,0 +1,18 @@
+<div  class="table-container">
+<table>
+  <thead>
+    <tr>
+      <th>Riding Number</th>
+      <th>Candidate Number</th>
+      <th>Elected Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let candidate of elected; let i = index">
+      <td>{{ candidate.RidingNumber }}</td>
+      <td>{{ candidate.CandidateNumber }}</td>
+      <td>{{ candidate.ElectedTime }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,30 @@
+<div  class="table-container">
+<table>
+  <thead>
+    <tr>
+      <th>Riding Number</th>
+      <th>Name (English)</th>
+      <th>Name (French)</th>
+      <th>Total Polls</th>
+      <th>Total Votes</th>
+      <th>Total Voters</th>
+      <th>Polls Reporting</th>
+      <th>New Riding</th>
+      <th>FFN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let riding of ridings; let i = index">
+      <td>{{ riding.RidingNumber }}</td>
+      <td>{{ riding.Name_En }}</td>
+      <td>{{ riding.Name_Fr }}</td>
+      <td>{{ riding.TotalPolls }}</td>
+      <td>{{ riding.TotalVotes }}</td>
+      <td>{{ riding.TotalVoters }}</td>
+      <td>{{ riding.PollsReporting }}</td>
+      <td>{{ riding.NewRiding }}</td>
+      <td>{{ riding.FFN }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

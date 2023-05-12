@@ -1,0 +1,30 @@
+<div class="table-container">
+    <table>
+        <thead>
+        <tr>
+            <th>Short Name (English)</th>
+            <th>Party ID</th>
+            <th>Name (English)</th>
+            <th>Party Colour</th>
+            <th>Short Name (French)</th>
+            <th>Fringe Party</th>
+            <th>Name (French)</th>
+            <th>Major Party</th>
+        </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let party of parties; let i = index">
+                <tr>
+                    <td>{{ party.ShortName_En }}</td>
+                    <td>{{ party.PartyID }}</td>
+                    <td>{{ party.Name_En }}</td>
+                    <td>{{ party.party_colour }}</td>
+                    <td>{{ party.ShortName_Fr }}</td>
+                    <td>{{ party.FringeParty }}</td>
+                    <td>{{ party.Name_Fr }}</td>
+                    <td>{{ party.MajorParty }}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>    

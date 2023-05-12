@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+
+import { PartiestableComponent } from './partiestable/partiestable.component';
+import { ElectedComponent } from './elected/elected.component';
+import { TotalsbyridingComponent } from './totalsbyriding/totalsbyriding.component';
+
+
+const routes: Routes = [
+
+  { path: 'parties-table', component: PartiestableComponent }, // Add this line
+  { path: 'elected', component: ElectedComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

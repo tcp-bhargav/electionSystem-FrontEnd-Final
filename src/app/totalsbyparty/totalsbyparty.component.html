@@ -1,0 +1,37 @@
+<div  class="table-container">
+<table>
+    <thead>
+      <tr>
+        <th>Party ID</th>
+        <th>Name (English)</th>
+        <th>Name (French)</th>
+        <th>Short Name (English)</th>
+        <th>Short Name (French)</th>
+        <th>Pop</th>
+        <th>Votes</th>
+        <th>Elected</th>
+        <th>Leading</th>
+        <th>Net</th>
+        <th>Call Data (English)</th>
+        <th>Call Data (French)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let party of totalsByParty ; let i = index">
+        <td>{{ party.PartyID }}</td>
+        <td>{{ party.Name_En }}</td>
+        <td>{{ party.Name_Fr }}</td>
+        <td>{{ party.ShortName_En }}</td>
+        <td>{{ party.ShortName_Fr }}</td>
+        <td>{{ party.Pop }}</td>
+        <td>{{ party.Votes }}</td>
+        <td>{{ party.Elected }}</td>
+        <td>{{ party.Leading }}</td>
+        <td>{{ party.Net }}</td>
+        <td>{{ party.CallData_En }}</td>
+        <td>{{ party.CallData_Fr }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  
