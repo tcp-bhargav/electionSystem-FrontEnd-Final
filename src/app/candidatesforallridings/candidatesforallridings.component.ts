@@ -16,7 +16,7 @@ export class CandidatesForAllRidingsComponent implements OnInit {
   }
 
   fetchRidingData() {
-    const endpointUrl = 'https://kbjbworijh.execute-api.us-east-1.amazonaws.com/AlbertaTestStage/alberta2023/candidates_for_all_ridings'; // Replace with the actual API endpoint URL
+    const endpointUrl = 'https://qqrii8476e.execute-api.us-east-1.amazonaws.com/TestStage/alberta2023/districts'; // Replace with the actual API endpoint URL
 
     this.http.get<any[]>(endpointUrl).subscribe(data => {
       this.ridings = data; // Store the received riding data in the 'ridings' array

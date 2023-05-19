@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-
+import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -18,6 +18,9 @@ import { ElectedComponent } from './elected/elected.component';
 import { RidingsComponent } from './ridings/ridings.component';
 import { TotalsByPartyComponent } from './totalsbyparty/totalsbyparty.component';
 import { TotalsbyridingComponent } from './totalsbyriding/totalsbyriding.component';
+import { DistrictsComponent } from './districts/districts.component';
+import { DistrictCandidatesComponent } from './districtcandidates/districtcandidates.component';
+
 
 
 
@@ -54,12 +57,15 @@ export class DataService {
     ElectedComponent,
     RidingsComponent,
     TotalsByPartyComponent,
-    TotalsbyridingComponent
+    TotalsbyridingComponent,
+    DistrictsComponent,
+    DistrictCandidatesComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule,
-    HttpClientModule
+    RouterModule.forRoot([]),
+    HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

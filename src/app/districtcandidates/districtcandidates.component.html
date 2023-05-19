@@ -1,0 +1,26 @@
+<div class="district-tables">
+    <div class="district-table" *ngFor="let response of districtResponses | keyvalue">
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Ballot Order</th>
+            <th>Given Name</th>
+            <th>Surname</th>
+            <th>Party ID</th>
+            <th>District ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let candidate of response.value">
+            <td>{{ candidate.candidateBallotOrder }}</td>
+            <td>{{ candidate.candidateGivenName }}</td>
+            <td>{{ candidate.candidateSurname }}</td>
+            <td>{{ candidate.candidatePartyId }}</td>
+            <td>{{ candidate.candidateDistrictId }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

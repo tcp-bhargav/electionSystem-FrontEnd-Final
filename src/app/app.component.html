@@ -1,66 +1,59 @@
+<img src="./Full-DARK-The-Canadian-Press.png" alt="The Canadian Press Logo">
 <h1>The Canadian Press</h1>
 
+<ng-container *ngIf="isCandidatesRouteActive(); else otherRoutes">
+  <!-- Candidates for All Ridings Table -->
+  <div class="table-container">
+    <h2>Districts</h2>
+    <div class="district-tables">
+      <div class="district-table" *ngFor="let response of sortedDistrictResponses()">
+        <h3>District {{ response.key }}</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Ballot Order</th>
+              <th>Given Name</th>
+              <th>Surname</th>
+              <th>Party ID</th>
+              <th>District ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let candidate of response.value">
+              <td>{{ candidate.candidateBallotOrder }}</td>
+              <td>{{ candidate.candidateGivenName }}</td>
+              <td>{{ candidate.candidateSurname }}</td>
+              <td>{{ candidate.candidatePartyId }}</td>
+              <td>{{ candidate.candidateDistrictId }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #otherRoutes>
 <!-- Parties Table -->
-<div class="table-container">
-  <h2>Parties Table</h2>
-  <app-partiestable></app-partiestable>
-</div>
-<hr> <!-- Add a horizontal line as a partition -->
+  <div class="table-container">
+    <h2>Parties Table</h2>
+    <app-partiestable></app-partiestable>
+  </div>
+  <hr> <!-- Add a horizontal line as a partition -->
 
-<hr> <!-- Add a horizontal line as a partition -->
+  <hr> <!-- Add a horizontal line as a partition -->
 
-<hr> <!-- Add a horizontal line as a partition -->
+  <hr> <!-- Add a horizontal line as a partition -->
 
-<!-- Candidates for All Ridings Table -->
-<div class="table-container">
-  <h2>Candidates for All Ridings</h2>
-  <app-candidatesforallridings></app-candidatesforallridings>
-</div>
+  <!-- Candidates for All Ridings Table -->
+  <div class="table-container">
+    <h2>Districts</h2>
+    <app-candidatesforallridings></app-candidatesforallridings>
+  </div>
+  <hr> <!-- Add a horizontal line as a partition -->
 
-<hr> <!-- Add a horizontal line as a partition -->
+  <hr> <!-- Add a horizontal line as a partition -->
 
-<hr> <!-- Add a horizontal line as a partition -->
-
-<hr> <!-- Add a horizontal line as a partition -->
-
-<!-- Candidates for All Ridings Table -->
-<div class="table-container">
-  <h2>Elected</h2>
-  <app-elected></app-elected>
-</div>
-
-<hr> <!-- Add a horizontal line as a partition -->
-
-<hr> <!-- Add a horizontal line as a partition -->
-
-<hr> <!-- Add a horizontal line as a partition -->
-
-<!-- Candidates for All Ridings Table -->
-<div class="table-container">
-  <h2>Ridings</h2>
-
-  <app-ridings></app-ridings>
-</div>
-<hr> <!-- Add a horizontal line as a partition -->
-
-<hr> <!-- Add a horizontal line as a partition -->
-
-<hr> <!-- Add a horizontal line as a partition -->
-
-<!-- Candidates for All Ridings Table -->
-<div class="table-container">
-  <h2>Totals By Party </h2>
-  <app-totalsbyparty></app-totalsbyparty>
-</div>
-<hr> <!-- Add a horizontal line as a partition -->
-
-<hr> <!-- Add a horizontal line as a partition -->
-
-<hr> <!-- Add a horizontal line as a partition -->
-
-<!-- Candidates for All Ridings Table -->
-<div class="table-container">
-  <h2>Totals By Ridings </h2>
-  <app-totalsbyriding></app-totalsbyriding>
-</div>  
+  <hr> <!-- Add a horizontal line as a partition -->
+</ng-template>
 <router-outlet></router-outlet>

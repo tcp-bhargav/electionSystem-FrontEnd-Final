@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-partiestable',
@@ -16,10 +16,13 @@ export class PartiestableComponent implements OnInit {
   }
 
   fetchPartyData() {
-    const endpointUrl = 'https://kbjbworijh.execute-api.us-east-1.amazonaws.com/AlbertaTestStage/alberta2023/parties'; // Replace with the actual API endpoint URL
+    
+    const endpointUrl = 'https://qqrii8476e.execute-api.us-east-1.amazonaws.com/TestStage/alberta2023/parties'; // Replace with the actual API endpoint URL
+  
+      this.http.get<any[]>(endpointUrl).subscribe(data => {
+        this.parties = data;
+      });
+    }
 
-    this.http.get<any[]>(endpointUrl).subscribe(data => {
-      this.parties = data; // Store the received party data in the 'parties' array
-    });
   }
-}
+

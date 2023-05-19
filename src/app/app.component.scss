@@ -1,0 +1,11 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 10px;
+  }
+  

@@ -1,5 +1,5 @@
 .table-container {
-    max-height: 400px; /* Adjust the desired height */
+    max-height: 400px;
     overflow-y: auto;
   }
   
@@ -14,7 +14,7 @@
   thead {
     position: sticky;
     top: 0;
-    background-color: #f2f2f2;
+    background-color: maroon; /* Changed to maroon red */
   }
   
   th,
@@ -23,20 +23,17 @@
     vertical-align: top;
     border-top: 1px solid #dee2e6;
     text-align: left;
+    font-family: Arial, sans-serif;
   }
   
   th {
-    background-color: #006400;
+    background-color: maroon; /* Changed to maroon red */
     color: #fff;
     font-weight: bold;
   }
   
   tr:nth-child(even) {
     background-color: #f2f2f2;
-  }
-  
-  tr:hover {
-    background-color: #ddd;
   }
   
   th:first-child,
@@ -50,12 +47,11 @@
   }
   
   tr:nth-child(odd) {
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
   }
   
-  tr:nth-child(odd):hover {
-    background-color: #8b0000;
-    color: #fff;
+  tr:hover {
+    background-color: #f2f2f2;
   }
   

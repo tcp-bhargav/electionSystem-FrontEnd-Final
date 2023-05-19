@@ -19,7 +19,9 @@ export class ElectedComponent implements OnInit {
     const endpointUrl = 'https://kbjbworijh.execute-api.us-east-1.amazonaws.com/AlbertaTestStage/alberta2023/elected'; // Replace with the actual API endpoint URL
 
     this.http.get<any[]>(endpointUrl).subscribe(data => {
-      this.elected = data; // Store the received elected candidates data in the 'elected' array
+      console.log('API Response:', data);
+      this.elected = data;
+       // Store the received elected candidates data in the 'elected' array
     });
   }
 }

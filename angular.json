@@ -67,6 +67,7 @@
             "production": {
               "browserTarget": "myapp:build:production"
             },
+            
             "development": {
               "browserTarget": "myapp:build:development"
             }

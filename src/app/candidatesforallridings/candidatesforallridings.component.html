@@ -1,25 +1,24 @@
 <div class="table-container">
-    <table>
-      <!-- Table header -->
-      <thead>
-        <tr>
-          <th>Riding Name</th>
-          <th>Candidate Name</th>
-          <th>Party</th>
-          <th>Votes</th>
-          <!-- Add more table headers as needed -->
-        </tr>
-      </thead>
-      <!-- Table body -->
-      <tbody>
-        <tr *ngFor="let riding of ridings ; let i = index">
-          <td>{{ riding.RidingName_En }}</td>
-          <td>{{ riding.First }} {{ riding.Last }}</td>
-          <td>{{ riding.PartyShortName_En }}</td>
-          <td>{{ riding.Votes }}</td>
-          <!-- Add more table cells as needed -->
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  
+  <table>
+    <!-- Table header -->
+    <thead>
+      <tr>
+        <th>Riding Name</th>
+        <th>District ID</th>
+        <th>Number of Polls</th>
+        <th>Number of Electors</th>
+        <th>Number of Candidates</th>
+      </tr>
+    </thead>
+    <!-- Table body -->
+    <tbody>
+      <tr *ngFor="let riding of ridings; let i = index">
+        <td>{{ riding.districtName }}</td>
+        <td>{{ riding.districtId }}</td>
+        <td>{{ riding.districtNumPolls }}</td>
+        <td>{{ riding.districtNumElectors }}</td>
+        <td>{{ riding.districtNumCandidates }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
