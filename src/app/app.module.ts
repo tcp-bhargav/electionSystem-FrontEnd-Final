@@ -20,6 +20,7 @@ import { TotalsByPartyComponent } from './totalsbyparty/totalsbyparty.component'
 import { TotalsbyridingComponent } from './totalsbyriding/totalsbyriding.component';
 import { DistrictsComponent } from './districts/districts.component';
 import { DistrictCandidatesComponent } from './districtcandidates/districtcandidates.component';
+import { VotesComponent } from './votes/votes.component';
 
 
 
@@ -59,7 +60,8 @@ export class DataService {
     TotalsByPartyComponent,
     TotalsbyridingComponent,
     DistrictsComponent,
-    DistrictCandidatesComponent
+    DistrictCandidatesComponent,
+    VotesComponent
   ],
   imports: [
     BrowserModule,

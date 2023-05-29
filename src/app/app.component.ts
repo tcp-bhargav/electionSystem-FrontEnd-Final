@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Router, ActivationEnd } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { DistrictCandidatesComponent } from './districtcandidates/districtcandidates.component';
+import { filter } from 'rxjs/operators';
 
 
 @Component({
@@ -11,11 +12,17 @@ import { DistrictCandidatesComponent } from './districtcandidates/districtcandid
 export class AppComponent {
   constructor(private router: Router) {}
   districtResponses: any[] = [];
+  parties: string[] = []; // Define the 'parties' property
+  districtVotes: any[] = []; // Define the 'districtVotes' property
   title = 'myapp';
 
 
   isCandidatesRouteActive(): boolean {
     return this.router.url.includes('/candidates');
+  }
+
+  isVotesRouteActive(): boolean {
+    return this.router.url.includes('/votes');
   }
 
   getDistrictsArray(): number[] {
@@ -29,5 +36,6 @@ export class AppComponent {
   sortedDistrictResponses(): any[] {
     return this.districtResponses.sort((a, b) => a.key - b.key);
   }
+
   
 }

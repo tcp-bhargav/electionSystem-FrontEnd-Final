@@ -1,10 +1,6 @@
 .table-container {
   max-height: 400px;
   overflow-y: auto;
-
-  select {
-    font-size: 20px; /* Adjust the font size as per your preference */
-  }
 }
 
 table {
@@ -18,7 +14,7 @@ table {
 thead {
   position: sticky;
   top: 0;
-  background-color: maroon; /* Changed to maroon red */
+  background-color: #CC212C; /* Changed to #CC212C red */
 }
 
 th,
@@ -31,7 +27,7 @@ td {
 }
 
 th {
-  background-color: maroon; /* Changed to maroon red */
+  background-color: #CC212C; /* Changed to #CC212C red */
   color: #fff;
   font-weight: bold;
 }
@@ -57,44 +53,4 @@ tr:nth-child(odd) {
 
 tr:hover {
   background-color: #f2f2f2;
-}
-
-select {
-  font-size: 16px; /* Adjust the font size as per your preference */
-}
-
-.district-row {
-  display: flex;
-  align-items: center;
-}
-
-.district-number {
-  margin-right: 10px;
-  font-weight: bold;
-}
-
-.arrow {
-  cursor: pointer;
-}
-
-.arrow-icon {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-top: 2px solid #000;
-  border-right: 2px solid #000;
-  transform: rotate(-45deg);
-  transition: transform 0.3s;
-}
-
-.arrow-down {
-  transform: rotate(45deg);
-}
-
-.candidate-list {
-  display: none;
-}
-
-.candidate-list.active {
-  display: block;
 }

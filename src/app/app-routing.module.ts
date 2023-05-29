@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { PartiestableComponent } from './partiestable/partiestable.component';
 import { ElectedComponent } from './elected/elected.component';
 import { DistrictCandidatesComponent } from './districtcandidates/districtcandidates.component';
+import { VotesComponent } from './votes/votes.component';
+
 
 const routes: Routes = [
 
@@ -13,6 +15,7 @@ const routes: Routes = [
   { path: 'elected', component: ElectedComponent },
   { path: 'candidates', component: DistrictCandidatesComponent },
   { path: 'candidates/:district', component: DistrictCandidatesComponent },
+  { path: 'votes', component: VotesComponent },
 ];
 
 @NgModule({

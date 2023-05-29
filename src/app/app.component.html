@@ -1,5 +1,4 @@
-<img src="./Full-DARK-The-Canadian-Press.png" alt="The Canadian Press Logo">
-<h1>The Canadian Press</h1>
+<img src="./assets/tcp-image-logo.PNG" alt="The Canadian Press Logo">
 
 <ng-container *ngIf="isCandidatesRouteActive(); else otherRoutes">
   <!-- Candidates for All Ridings Table -->
@@ -18,6 +17,17 @@
 
 <ng-template #otherRoutes>
 <!-- Parties Table -->
+
+  <div class="table-container">
+    <h2>Votes</h2>
+    <app-votes></app-votes>  
+  </div>
+
+  <div class="table-container">
+    <h2>District Candidates Table</h2>
+    <app-districtcandidates></app-districtcandidates>
+  </div>
+
   <div class="table-container">
     <h2>Parties Table</h2>
     <app-partiestable></app-partiestable>
@@ -38,17 +48,16 @@
   <hr> <!-- Add a horizontal line as a partition -->
 
   <hr> <!-- Add a horizontal line as a partition -->
-
-  <div class="table-container">
-    <h2>District Candidates</h2>
-    <app-districtcandidates></app-districtcandidates>
-  </div>
-  <hr> <!-- Add a horizontal line as a partition -->
-
-  <hr> <!-- Add a horizontal line as a partition -->
-
-  <hr> <!-- Add a horizontal line as a partition -->
-
+  <p></p>
+  <p></p>
+  <p></p>
+  <footer class="page-footer">
+    <hr> <!-- Add a horizontal line as a partition -->
+    <div class="page-footer-content">
+      <!-- Footer content here -->
+    </div>
+  </footer>
 
 </ng-template>
 <router-outlet></router-outlet>
+

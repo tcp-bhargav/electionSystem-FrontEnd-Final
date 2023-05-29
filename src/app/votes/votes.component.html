@@ -1,0 +1,17 @@
+<div class="table-container">
+<table>
+    <thead>
+      <tr>
+        <th>District ID</th>
+        <th *ngFor="let party of parties">{{ party }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let districtData of districtVotes">
+        <td>{{ districtData.district_id }}</td>
+        <td *ngFor="let party of parties">{{ districtData.parties[party]?.candidate }} ({{ districtData.parties[party]?.highest_votes }})</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  
