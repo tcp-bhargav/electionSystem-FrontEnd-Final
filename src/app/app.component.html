@@ -1,9 +1,9 @@
-<img src="./assets/tcp-image-logo.PNG" alt="The Canadian Press Logo">
-
+<img src="./assets/tcp-image-dark.png" alt="The Canadian Press Logo" width="500rem">
+<h1>The Canadian Press Alberta 2023 Election Dashboard</h1>
 <ng-container *ngIf="isCandidatesRouteActive(); else otherRoutes">
   <!-- Candidates for All Ridings Table -->
   <div class="table-container">
-    <h2>District Candidates</h2>
+    <h2>Candidates</h2>
     <div class="district-table" *ngFor="let districtData of districtResponses">
       <h3>District {{ districtData.district }}</h3>
       <select>
@@ -24,35 +24,27 @@
   </div>
 
   <div class="table-container">
-    <h2>District Candidates Table</h2>
+    <h2>Candidates</h2>
     <app-districtcandidates></app-districtcandidates>
   </div>
 
   <div class="table-container">
-    <h2>Parties Table</h2>
+    <h2>Parties</h2>
     <app-partiestable></app-partiestable>
   </div>
-  <hr> <!-- Add a horizontal line as a partition -->
-
-  <hr> <!-- Add a horizontal line as a partition -->
-
-  <hr> <!-- Add a horizontal line as a partition -->
+  
 
   <!-- Candidates for All Ridings Table -->
   <div class="table-container">
     <h2>Districts</h2>
     <app-candidatesforallridings></app-candidatesforallridings>
   </div>
-  <hr> <!-- Add a horizontal line as a partition -->
 
-  <hr> <!-- Add a horizontal line as a partition -->
-
-  <hr> <!-- Add a horizontal line as a partition -->
   <p></p>
   <p></p>
   <p></p>
   <footer class="page-footer">
-    <hr> <!-- Add a horizontal line as a partition -->
+   
     <div class="page-footer-content">
       <!-- Footer content here -->
     </div>
